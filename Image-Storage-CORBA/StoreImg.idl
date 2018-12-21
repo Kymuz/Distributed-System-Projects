@@ -1,0 +1,16 @@
+module ImgApp{
+
+	struct Client {
+	long Clientid;
+	string name;
+	string email;
+	long password;
+	};
+	typedef sequence<octet> imgBuffer;
+	interface ImgServer {
+
+		void InputUser(in string a, in string b, in long c);
+		boolean GetClient(in Client c1);
+		imgBuffer Getimg(in string ImgName);
+	};
+};
